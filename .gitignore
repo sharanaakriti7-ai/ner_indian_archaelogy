@@ -1,6 +1,16 @@
-# Secrets / Environment
+# Environment
 .env
-.env.*
+.env.local
+*.venv
+.venv/
+venv/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
 
 # Python
 __pycache__/
@@ -11,52 +21,16 @@ __pycache__/
 *.egg-info/
 dist/
 build/
-.eggs/
 
-# Virtual Environments
-.venv/
-venv/
-env/
-ENV/
-
-# Jupyter Notebooks checkpoints
-.ipynb_checkpoints/
-
-# Model checkpoints & large outputs
-outputs/
-models/*.pt
-models/*.bin
-models/*.pth
-*.pt
-*.bin
+# Large Model Files (use Git LFS or separate storage)
 *.pth
-*.ckpt
+*.pt
+*.pickle
+*.pkl
+*.bin
+models/
+outputs/
 
-# Logs
-*.log
-runs/
-logs/
-
-# Data (managed in separate dataset repo)
-# Uncomment the line below if raw data should not be committed
-# data/raw/
-
-# OS Files
+# OS
 .DS_Store
 Thumbs.db
-
-# IDE
-.vscode/
-.idea/
-*.swp
-
-# Large generated / compiled files
-RESEARCH_PAPER_BASE64.md
-*.pdf
-
-# Weights & Biases
-wandb/
-
-# Tokenizer cache
-tokenizer_cache/
-transformers_cache/
