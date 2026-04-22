@@ -1,0 +1,142 @@
+# Sentence 135
+Remote	O
+sensing	O
+highlighted	O
+an	O
+ancient	O
+channel	O
+near	O
+Dholavira	B-LOC
+
+# Sentence 136
+Elemental	O
+analysis	O
+detected	O
+zinc	B-MAT
+
+# Sentence 137
+Excavation	O
+notes	O
+describe	O
+a	O
+trench	B-CON
+collapse	I-CON
+
+# Sentence 138
+A	O
+stone	B-ART
+bead	O
+was	O
+catalogued	O
+
+# Sentence 139
+Ceramic	O
+sequence	O
+is	O
+assigned	O
+to	O
+the	O
+Gupta	B-PER
+period	I-PER
+
+# Sentence 140
+Microwear	O
+analysis	O
+suggests	O
+flint	B-ART
+was	O
+used	O
+as	O
+a	O
+tool	O
+
+# Sentence 141
+Field	O
+notes	O
+list	O
+trench	B-CON
+9	I-CON
+as	O
+sterile	O
+
+# Sentence 142
+A	O
+bronze	B-ART
+mirror	O
+was	O
+photographed	O
+
+# Sentence 143
+Radiocarbon	O
+calibration	O
+places	O
+this	O
+sample	O
+around	O
+300	B-PER
+BCE	I-PER
+
+# Sentence 144
+The	O
+excavation	O
+mapped	O
+the	O
+Kalibangan	B-LOC
+mounds	I-LOC
+
+# Sentence 145
+Chemical	O
+tests	O
+showed	O
+lead	B-MAT
+traces	O
+
+# Sentence 146
+Contextual	O
+records	O
+note	O
+a	O
+burial	B-CON
+pit	I-CON
+
+# Sentence 147
+Typology	O
+places	O
+this	O
+assemblage	O
+in	O
+the	O
+Chalcolithic	B-PER
+period	I-PER
+
+# Sentence 148
+Remote	O
+survey	O
+mapped	O
+the	O
+Sutlej	B-LOC
+terrace	I-LOC
+
+# Sentence 149
+The	O
+team	O
+surveyed	O
+the	O
+Ghaggar	B-LOC
+
+# Sentence 150
+Typology	O
+links	O
+this	O
+assemblage	O
+to	O
+the	O
+Kushan	B-PER
+period	I-PER
+
+# Sentence 151
+The	O
+survey	O
+documented	O
+Rakhigarhi	B-LOC
+

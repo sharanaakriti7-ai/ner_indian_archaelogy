@@ -1,0 +1,6 @@
+img {
+    max-width: 500px !important;
+    height: auto !important;
+    display: block !important;
+    margin: 20px auto !important;
+}

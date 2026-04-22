@@ -1,0 +1,133 @@
+# Sentence 152
+Ceramic	O
+typology	O
+is	O
+consistent	O
+with	O
+Late	B-PER
+Harappan	I-PER
+phase	I-PER
+
+# Sentence 153
+Microscopic	O
+analysis	O
+identified	O
+quartz	B-MAT
+grains	O
+
+# Sentence 154
+The	O
+team	O
+surveyed	O
+the	O
+Dholavira	B-LOC
+mound	I-LOC
+
+# Sentence 155
+Petrographic	O
+study	O
+identified	O
+granite	B-MAT
+
+# Sentence 156
+Remote	O
+sensing	O
+highlighted	O
+an	O
+ancient	O
+channel	O
+near	O
+Banawali	B-LOC
+
+# Sentence 157
+Elemental	O
+analysis	O
+detected	O
+phosphorus	B-MAT
+
+# Sentence 158
+The	O
+survey	O
+mapped	O
+Kalibangan	B-LOC
+
+# Sentence 159
+Microwear	O
+analysis	O
+suggests	O
+flint	B-ART
+was	O
+used	O
+as	O
+an	O
+implement	O
+
+# Sentence 160
+Field	O
+notes	O
+list	O
+trench	B-CON
+11	I-CON
+as	O
+sterile	O
+
+# Sentence 161
+The	O
+excavation	O
+mapped	O
+the	O
+Sutlej	B-LOC
+
+# Sentence 162
+Contextual	O
+records	O
+note	O
+a	O
+burial	B-CON
+cluster	I-CON
+
+# Sentence 163
+Remote	O
+survey	O
+mapped	O
+the	O
+Ghaggar	B-LOC
+
+# Sentence 164
+Context	O
+sheets	O
+note	O
+a	O
+trench	B-CON
+boundary	I-CON
+
+# Sentence 165
+Radiocarbon	O
+results	O
+suggest	O
+circa	O
+50	B-PER
+CE	I-PER
+
+# Sentence 166
+The	O
+team	O
+surveyed	O
+the	O
+Ropar	B-LOC
+
+# Sentence 167
+Radiocarbon	O
+results	O
+indicate	O
+circa	O
+300	B-PER
+CE	I-PER
+
+# Sentence 168
+The	O
+team	O
+surveyed	O
+the	O
+Dholavira	B-LOC
+

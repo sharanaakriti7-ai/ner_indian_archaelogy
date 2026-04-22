@@ -1,0 +1,36 @@
+# Environment
+.env
+.env.local
+*.venv
+.venv/
+venv/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+
+# Large Model Files (use Git LFS or separate storage)
+*.pth
+*.pt
+*.pickle
+*.pkl
+*.bin
+models/
+outputs/
+
+# OS
+.DS_Store
+Thumbs.db

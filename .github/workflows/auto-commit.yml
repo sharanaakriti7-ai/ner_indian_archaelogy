@@ -1,0 +1,93 @@
+name: Auto Commit and Push
+
+on:
+  push:
+    branches:
+      - main
+      - develop
+  schedule:
+    # Run every 6 hours
+    - cron: '0 */6 * * *'
+  workflow_dispatch:
+    inputs:
+      commit_message:
+        description: 'Custom commit message'
+        required: false
+        default: 'Auto-commit from GitHub Actions'
+
+jobs:
+  sync-and-commit:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Git
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+
+      - name: Check for changes
+        id: changes
+        run: |
+          if git diff --quiet; then
+            echo "has_changes=false" >> $GITHUB_OUTPUT
+          else
+            echo "has_changes=true" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Add all files
+        if: steps.changes.outputs.has_changes == 'true'
+        run: |
+          git add -A
+          echo "Files staged for commit"
+
+      - name: Check for staged changes
+        id: staged
+        run: |
+          if git diff --cached --quiet; then
+            echo "has_staged=false" >> $GITHUB_OUTPUT
+          else
+            echo "has_staged=true" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Commit changes
+        if: steps.staged.outputs.has_staged == 'true'
+        run: |
+          COMMIT_MSG="${{ github.event.inputs.commit_message || format('Auto-commit: {0}', github.event.head_commit.message) }}"
+          if [ -z "$COMMIT_MSG" ] || [ "$COMMIT_MSG" == "Auto-commit: " ]; then
+            COMMIT_MSG="Auto-commit: $(date +'%Y-%m-%d %H:%M:%S UTC')"
+          fi
+          git commit -m "$COMMIT_MSG"
+          echo "Committed: $COMMIT_MSG"
+
+      - name: Push changes
+        if: steps.staged.outputs.has_staged == 'true'
+        run: |
+          git push origin ${{ github.ref_name }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Skip if no changes
+        if: steps.staged.outputs.has_staged == 'false'
+        run: |
+          echo "No staged changes to commit"
+
+  notify:
+    runs-on: ubuntu-latest
+    needs: sync-and-commit
+    if: always()
+    
+    steps:
+      - name: Workflow status
+        run: |
+          if [ "${{ needs.sync-and-commit.result }}" == "success" ]; then
+            echo "✓ Auto-commit workflow completed successfully"
+          else
+            echo "✗ Auto-commit workflow had issues"
+          fi
